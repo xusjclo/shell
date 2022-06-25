@@ -1,4 +1,5 @@
 #!/bin/bash
+# test
 mkdir -p /ops/inst/
 cd /ops/inst/
 wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/redhat-stable/jenkins-2.204.5-1.1.noarch.rpm
