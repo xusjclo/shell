@@ -20,26 +20,26 @@ def sentemail():
     # 设置发件服务器端口号。注意，这里有SSL和非SSL两种形式，现在一般是SSL方式
     sender = '13638602636@163.com'
     # 设置发件邮箱，一定要自己注册的邮箱
-    pwd = 'Passw0rd'
+    pwd = 'Passw0rdsasldaskdjsaldjlksadj'
     # 设置发件邮箱的授权码密码，根据163邮箱提示，登录第三方邮件客户端需要授权码
     #receiver = '13638602636@163.com'
-    receiver = 'dengxy@smcaiot.com,shiby@smcaiot.com,xusj@smcaiot.com,346487106@qq.com'
+    receiver = '346487106@qq.com'
     # 设置邮件接收人，可以是QQ邮箱
-    body = '屋畔疫情统计请查看附件!'
+    body = '请查看附件!'
     # 设置邮件正文，这里是支持HTML的
     #msg = MIMEText(body,'html','utf-8')
     msg.attach(MIMEText(body,'plain','utf-8'))
     # 设置正文为符合邮件格式的HTML内容
-    msg['subject'] = Header('屋畔疫情数据统计','utf-8')
+    msg['subject'] = Header('数据统计','utf-8')
     # 设置邮件标题
     msg['from'] = sender
     # 设置发送人
     msg['to'] = receiver
 
     #添加附件
-    att1 = MIMEText(open(r'wupan.xls','rb').read(),'base64','utf-8')
+    att1 = MIMEText(open(r'baobiao.xls','rb').read(),'base64','utf-8')
     att1["Content-Type"] = 'application/octet-stream'
-    att1["Content-Disposition"] = 'attachment;filename="wupan.xls"'
+    att1["Content-Disposition"] = 'attachment;filename="baobiao.xls"'
     msg.attach(att1)
     # 设置接收人
     try:
@@ -59,7 +59,7 @@ def conMysql():
     conn = pymysql.connect(
         host='47.110.84.xx',
         user='dbname',
-        password='V7qxFT7aLUlR11eoKrbSwNzj',
+        password='2V7qxFT7aLUlR11eoKrbSwNzj',
         db='dbname',
         port=3306,
         charset='utf8'
@@ -139,5 +139,5 @@ def write_to_excel(name):
     wbk.save(filename)
 
 if __name__ == '__main__':
-    write_to_excel('wupan')
+    write_to_excel('baobiao')
     sentemail()
