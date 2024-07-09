@@ -26,3 +26,4 @@ function color_echo()
 }
 
 # 添加了一些东西  commit2 
+# test mr
