@@ -3,7 +3,7 @@ function color_echo()
  # @Author: svensjxu
  # @Date: 2024-07-09 11:33:22
  # @LastEditors: svensjxu
- # @LastEditTime: 2024-07-09 11:37:14
+ # @LastEditTime: 2024-07-09 11:40:36
  # @FilePath: /projects/1/shell/color.sh
  # @Description: 
  # 
@@ -24,3 +24,5 @@ function color_echo()
           echo -e " $str";;
     esac
 }
+
+# 添加了一些东西  commit2 
