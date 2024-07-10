@@ -8,6 +8,27 @@ function color_echo()
  # @Description: 
  # 
  # Copyright (c) 2024 by tcencent.com, All Rights Reserved. 
+
+report_notice() {
+    echo -e "\033[33m [notice] $1 \033[0m"
+}
+report_common() {
+    echo -e "[debug] $1"
+}
+
+report_success() {
+    echo -e "\033[32m[info] $1\033[0m"
+}
+
+report_failed() {
+    echo -e "\033[31m[error] $1\033[0m"
+}
+error_exit() {
+    report_failed $1
+    exit 1
+}
+
+ 
 ### 
 {
     local str=$1
